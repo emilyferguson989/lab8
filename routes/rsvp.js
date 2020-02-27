@@ -1,3 +1,10 @@
+exports.addRSVP = function(request, response) {
+  var rsvpEmail = request.body.rsvpEmail;
+  console.log(rsvpEmail);
+  data.rsvp.push(rsvpEmail);
+  response.send(rsvpEmail);
+};
+
 var data = {
   rsvp: ['ixd@ucsd.edu']
 };
@@ -8,3 +15,4 @@ var data = {
 exports.adminView = function(request, response){
   response.render('rsvp', data);
 };
+
